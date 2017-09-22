@@ -1,13 +1,15 @@
 #include<stdio.h>
 #include<math.h>
 
-double f(double t,double y);
+double f(double x,double y);
+double test1(double x,double y);
+double test2(double x,double y);
 
 int main(){
 
   //計算範囲
   double t_start=0.00;
-  double t_end=1.00;
+  double t_end=2.00;
 
   //初期値を設定
   double y=1.00;
@@ -45,7 +47,11 @@ int main(){
 }
 
 double f(double x,double y){
+  double ans=test2(x,y);
+  return ans;
+}
 
+double test1(double x,double y){
   //計算式は
   // https://suugaku-bukai.esnet.ed.jp/2008/study/2004/20040301.html
   //から引用
@@ -53,4 +59,15 @@ double f(double x,double y){
   double a=1.0;
   return a*y;
  
+}
+
+//計算式は
+// https://suugaku-bukai.esnet.ed.jp/2008/study/2004/20040301.html
+//から引用
+double test2(double x,double y){
+  double A=2.0;
+  double k=1.0;
+
+  return k*(A-y)*y;
+  
 }
