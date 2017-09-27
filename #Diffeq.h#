@@ -1,0 +1,14 @@
+
+#include<stdio.h>
+
+//微分の式をまとめておくクラス
+
+class Diffeq{
+ private:
+  double test1(double x,double y);
+  double test2(double x,double y);
+ public:
+  Diffeq(void);
+  double getDiff(double x,double y);
+};
+
