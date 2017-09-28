@@ -1,17 +1,11 @@
+
 #include<stdio.h>
 #include<math.h>
 #include"Diffeq.hpp"
-
-/*
-double f(double x,double y);
-double test1(double x,double y);
-double test2(double x,double y);
-*/
-//class Diffeq;
+#include"Initial_Value.hpp"
+#include"ValueInfo.hpp"
 
 int main(){
-
-  
   //微分方程式クラス
   Diffeq* diffeq;
 
@@ -20,12 +14,13 @@ int main(){
   //計算範囲
   double t_start=0.00;
   double t_end=1.00;
+   //刻み幅
+  double step=0.01;
 
   //初期値を設定
-  double y=1.00;
-
-  //刻み幅
-  double step=0.01;
+  //double y=1.00;
+  Initial_Value* initVal;
+  initVal=new Initial_Value();
 
   //微小時間内の増加量
   double k=0.00;
@@ -34,7 +29,12 @@ int main(){
   double k1,k2,k3,k4=0.0;
   double slope1,slope2,slope3,slope4=0.0;
 
+  ValueInfo* valueInfo=initVal->getY();
+  double y=valueInfo->getValue();
+  //double y=1.0;
+  
   for(double t=t_start;t<t_end;t+=step){
+
     //k1を求める
     slope1=diffeq->getDiff(t,y);
     k1=step*slope1;
