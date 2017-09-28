@@ -8,8 +8,8 @@ private:
   double t;
   double y;
 public:
-  DataTable();
-  double getData(string);
+  DataTable(double t,double y);
+  //double getData();
   double getT();
   double getY();
 };

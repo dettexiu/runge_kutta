@@ -1,6 +1,8 @@
 #include"DataTable.hpp"
 
-DataTable::DataTable(){
+DataTable::DataTable(double t,double y){
+  this->t=t;
+  this->y=y;
 }
 
 double DataTable::getT(){
