@@ -58,6 +58,7 @@ void Calculator::calc(){
     data.push_back(table);
   }
 
+  printf("data[0]:%lf", data.at(0)->getY());
   printf("y:%lf",y);
 }
 

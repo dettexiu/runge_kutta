@@ -9,7 +9,6 @@ private:
   double y;
 public:
   DataTable(double t,double y);
-  //double getData();
   double getT();
   double getY();
 };

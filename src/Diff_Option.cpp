@@ -18,6 +18,7 @@ double Diff_Option::getTEnd(){
   return this->t_end;
 }
 
+
 double Diff_Option::setStep(double step){
   this->step=step;
 }

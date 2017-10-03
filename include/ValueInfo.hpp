@@ -13,7 +13,7 @@ public:
   ValueInfo(string label,double value);
   string getLabel();
   double getValue();
-  //double operator+();
+  double transValue();
 };
 
 #endif

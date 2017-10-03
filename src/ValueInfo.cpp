@@ -1,4 +1,5 @@
 #include "ValueInfo.hpp"
+using namespace std;
 
 ValueInfo::ValueInfo(string label,double value){
   this->label=label;
